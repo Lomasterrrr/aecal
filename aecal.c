@@ -380,6 +380,7 @@ xlong:
 
 	for (i = 0; i < 12; i += 3) {
 		memset(str, 0, 432);
+
 		printf("	 %.3s", smon[i]);
 		printf("\t\t\t%.3s", smon[i + 1]);
 		printf("		       %.3s\n", smon[i + 2]);
