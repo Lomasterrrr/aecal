@@ -31,7 +31,8 @@ struct __holiday {
 	int dayw;    /* day of the week; 0-6 */
 
 	/* array for holidays; -1 = any year/mouth/day/dayw */
-} hdays[] = { { -1, 1, 1, -1 }, { -1, 9, 1, -1 }, { -1, -1, 13, 5 },
-	{ -1, 3, 8, -1 } };
+} hdays[] = { { -1, 1, 1, -1 }, { -1, 1, 7, -1 }, { -1, 2, 23, -1 },
+	{ -1, 3, 8, -1 }, { -1, 5, 1, -1 }, { -1, 5, 9, -1 },
+	{ -1, 6, 12, -1 } };
 
 #endif

@@ -1,22 +1,11 @@
-CC = cc
-CFLAGS = -Wall -O2
-TARGET = aecal
-PREFIX ?= /usr/local
-BINDIR = $(DESTDIR)$(PREFIX)/bin
-
-all: $(TARGET)
-
-$(TARGET): aecal.c
-	$(CC) $(CFLAGS) -o $(TARGET) aecal.c
-
-install: $(TARGET)
-	mkdir -p $(BINDIR)
-	install -m 755 $(TARGET) $(BINDIR)/$(TARGET)
-
+all:
+	cc aecal.c -Wall -O2 -o aecal
+	mv aecal bin
+install: all
+	mv bin/aecal /usr/local/bin
 uninstall:
-	rm -f $(BINDIR)/$(TARGET)
-
+	rm /usr/local/bin/aecal
 clean:
-	rm -f $(TARGET)
+	rm bin/aecal
 
 .PHONY: all install uninstall clean

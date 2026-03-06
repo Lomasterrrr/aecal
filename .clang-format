@@ -23,21 +23,8 @@ BinPackParameters: true
 BreakBeforeBinaryOperators: None
 BreakBeforeBraces: WebKit
 BreakBeforeTernaryOperators: false
-# TODO: BreakStringLiterals can cause very strange formatting so turn it off?
 BreakStringLiterals: false
-# Prefer:
-# some_var = function(arg1,
-#    arg2)
-# over:
-# some_var =
-#     function(arg1, arg2)
 PenaltyBreakAssignment: 100
-# Prefer:
-# some_long_function(arg1, arg2
-#     arg3)
-# over:
-# some_long_function(
-#     arg1, arg2, arg3)
 PenaltyBreakBeforeFirstCallParameter: 100
 CompactNamespaces: true
 DerivePointerAlignment: false
@@ -157,11 +144,6 @@ IncludeCategories:
   - Regex: '^\".*\.h\"'
     Priority: 10
     SortPriority: 100
-# LLVM's header include ordering style is almost the exact opposite of ours.
-# Unfortunately, they have hard-coded their preferences into clang-format.
-# Clobbering this regular expression to avoid matching prevents non-system
-# headers from being forcibly moved to the top of the include list.
-# http://llvm.org/docs/CodingStandards.html#include-style
 IncludeIsMainRegex: 'BLAH_DONT_MATCH_ANYTHING'
 SortIncludes: true
 KeepEmptyLinesAtTheStartOfBlocks: false
