@@ -1,0 +1,36 @@
+.TH AECAL 1 "2026-03-09"
+.
+.SH NAME
+aecal \- innovative console calendar
+.
+.SH SYNOPSIS
+.nf
+\fBaecal\fI [option] <arg>\fP
+.fi
+.
+.SH DESCRIPTION
+.BR aecal
+Innovative console \fIcalendar\fP based on cal.c from bsd 4.2. 
+The configuration is performed by modifying the \fBconfig.h\fP file.
+.SH OPTIONS
+.TP
+.B -y, y, year
+will display the entire current year
+.B NOTE:
+aecal can receive the month and year as arguments, see \fBEXAMPLES\fB
+.TP
+.B -e, e, easter \fI<arg>\fP
+display the date of Easter
+.TP
+.B -h, h, help
+display the help menu
+.SH EXAMPLES
+.TP 
+.B aecal
+will display the current month of the year
+.TP
+.B aecal 1023
+will display the entire year 1023
+.TP
+.B aecal 1023 4
+will display the entire 4th month of 1023
