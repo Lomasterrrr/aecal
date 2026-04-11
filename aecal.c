@@ -328,7 +328,7 @@ main(int c, char **av)
 		eastern:
 			easterg(y, i, &tm);
 			strftime(str, sizeof(str), "%B %e %Y", &tm);
-			printf("%s %s\n", str, (i) ? "Catholic" : "Orthodox");
+			printf("%s %s\n", str, (!i) ? "Catholic" : "Orthodox");
 
 			if (i--)
 				goto eastern;
