@@ -249,8 +249,8 @@ cal(int m, int y, char *p, int w, int cur, bool mflg)
 
 		/* master processing */
 		if (i > 9)
-			*s = i / 10 + '0' | flag;
-		*++s = i % 10 + '0' | flag;
+			*s = (i / 10 + '0') | flag;
+		*++s = (i % 10 + '0') | flag;
 		s += 2;
 
 		if (++d == 7) {
